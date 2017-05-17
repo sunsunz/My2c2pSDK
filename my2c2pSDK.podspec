@@ -14,6 +14,7 @@ Pod::Spec.new do |s|
                     2c2p payment system for iOS native.
                     DESC
 
+
   s.homepage        = 'https://s.2c2p.com/Manuals/ios/index.html'
   s.license         = { :type => "MIT" }
   s.author          = { "Chatchawal Saesee" => "chatchawal@2c2p.com" }
