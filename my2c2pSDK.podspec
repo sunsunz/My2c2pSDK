@@ -19,7 +19,9 @@ Pod::Spec.new do |s|
   s.license         = { :type => "MIT" }
   s.author          = { "Chatchawal Saesee" => "chatchawal@2c2p.com" }
   s.platform        = :ios, "8.0"
-  s.source          = { :git => "https://bitbucket.org/2c2p/my2c2p_ios_sdk_public.git", :tag => s.version }
+
+  # s.source          = { :git => "https://bitbucket.org/2c2p/my2c2p_ios_sdk_public.git", :tag => s.version }
+  s.source          = { :git => "https://github.com/sunsunz/My2c2pSDK.git", :tag => s.version }
   s.source_files    = "my2c2pSDK/my2c2pSDK.framework/Headers/*.h"
   s.resource        = "my2c2pSDK/my2c2pResources.bundle"
   s.preserve_paths  = "my2c2pSDK/my2c2pSDK.framework" , "my2c2pSDK/my2c2p/my2c2pResources.bundle"
