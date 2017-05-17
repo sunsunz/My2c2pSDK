@@ -7,9 +7,8 @@
 #
 
 Pod::Spec.new do |s|
-
+  s.version         = "3.0.6"
   s.name            = "My2c2pSDK"
-  s.version         = "3.0.3"
   s.summary         = "2c2p Payment System for iOS"
   s.description     = <<-DESC
                     2c2p payment system for iOS native.
