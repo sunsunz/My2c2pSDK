@@ -24,10 +24,10 @@ Pod::Spec.new do |s|
   s.source          = { :git => "https://github.com/sunsunz/My2c2pSDK.git", :tag => s.version }
   s.source_files    = "My2c2pSDK/My2c2pSDK/my2c2pSDK.framework/Headers/*.h"
   s.resource        = "My2c2pSDK/My2c2pSDK/my2c2pResources.bundle"
-  # s.preserve_paths  = "my2c2pSDK/my2c2pSDK.framework" , "my2c2pSDK/my2c2p/my2c2pResources.bundle"
+  s.preserve_paths  = "my2c2pSDK/my2c2pSDK.framework" , "my2c2pSDK/my2c2p/my2c2pResources.bundle"
   s.framework       = "QuartzCore" , "Security" , "PassKit"
   s.library         = "z"
   s.requires_arc    = true
   s.xcconfig        = { "OTHER_LDFLAGS" => "-ObjC -lstdc++" }
-  # s.ios.vendored_frameworks = "my2c2pSDK/my2c2pSDK.framework"
+  s.ios.vendored_frameworks = "my2c2pSDK/my2c2pSDK.framework"
 end
