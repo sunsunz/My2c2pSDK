@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import "PrefixHeader.pch"
-#import "my2c2pSDK/My2c2pSDK.h"
+#import "My2c2pSDK/My2c2pSDK.h"
 
 #define RAND_FROM_TO(min, max) (min + arc4random_uniform(max - min + 1))
 
