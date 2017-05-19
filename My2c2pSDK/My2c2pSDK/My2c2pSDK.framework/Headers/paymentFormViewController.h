@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol paymentFormViewControllerDelegate <NSObject>
+@protocol PaymentFormViewControllerDelegate <NSObject>
 
 @required
 - (void)cardInformationConfirmWithDictionary:(NSDictionary*)dictionary AndViewController:(UIViewController*)controller;
@@ -16,19 +16,19 @@
 
 @end
 
-@protocol paymentFormViewControllerSourceDelegate <NSObject>
+@protocol PaymentFormViewControllerSourceDelegate <NSObject>
 
 @optional
 - (void)paymentFormViewDidLoad;
 
 @end
 
-@interface paymentFormViewController : UIViewController
+@interface PaymentFormViewController : UIViewController
 
 
-@property (nonatomic,strong) id<paymentFormViewControllerDelegate> delegate;
+@property (nonatomic,strong) id<PaymentFormViewControllerDelegate> delegate;
 
-@property (nonatomic,strong) id<paymentFormViewControllerSourceDelegate> delegateVC;
+@property (nonatomic,strong) id<PaymentFormViewControllerSourceDelegate> delegateVC;
 
 @property (nonatomic) BOOL useCustomView;
 @property (nonatomic,assign) BOOL productionMode;

@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol otpViewControllerDelegate <NSObject>
-@required
--(void)browserCloseWithURL:(NSString*)urlString RawData:(NSString*)raw AndViewController:(UIViewController*)viewController Error:(NSError *)error;
-@end
+//@protocol otpViewControllerDelegate <NSObject>
+//@required
+//-(void)browserCloseWithURL:(NSString*)urlString RawData:(NSString*)raw AndViewController:(UIViewController*)viewController Error:(NSError *)error;
+//@end

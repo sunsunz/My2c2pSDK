@@ -7,37 +7,33 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "my2c2pHeader.h"
+#import "My2c2pHeader.h"
 
 @class PKPaymentRequest;
 
-@protocol my2c2pPaymentFormViewControllerDelegate <NSObject>
 
+@protocol My2c2pPaymentFormViewControllerDelegate <NSObject>
 @optional
 - (void)loadChannel:(My2c2pPaymentChannel)channel WithController:(UIViewController *)controller;
-
 - (void)cardInformationConfirmWithDictionary:(NSDictionary *)dictionary AndViewController:(UIViewController*)controller;
 - (void)dismissCardInformationWithController:(UIViewController *)controller AndError:(NSError *)error;
 - (void)dismissCardInformationWithController:(UIViewController *)controller;
 - (void)oneTwoThreePaymentDictionary:(NSDictionary *)dictionary AndViewController:(UIViewController *)controller;
-
 - (void)paymentFormDidReceiveMerchantDetail: (NSDictionary *)response;
 @end
 
-@protocol my2c2pPaymentFormViewControllerSourceDelegate <NSObject>
 
+@protocol My2c2pPaymentFormViewControllerSourceDelegate <NSObject>
 @optional
 - (void)paymentFormViewDidLoad;
-
 @end
 
-@interface my2c2pPaymentFormViewController : UIViewController
 
 
+@interface My2c2pPaymentFormViewController : UIViewController
 
-@property (nonatomic,strong) id<my2c2pPaymentFormViewControllerDelegate> delegate;
-
-@property (nonatomic,strong) id<my2c2pPaymentFormViewControllerSourceDelegate> delegateVC;
+@property (nonatomic,strong) id<My2c2pPaymentFormViewControllerDelegate> delegate;
+@property (nonatomic,strong) id<My2c2pPaymentFormViewControllerSourceDelegate> delegateVC;
 
 @property (nonatomic) BOOL useCustomView;
 @property (nonatomic,assign) BOOL productionMode;
@@ -83,7 +79,6 @@
 
 - (void) setAllowStoreCard:(BOOL)allow;
 - (void) setMaskedPan:(NSString*)maskedPan;
-
 
 
 - (void)showLoadingView;

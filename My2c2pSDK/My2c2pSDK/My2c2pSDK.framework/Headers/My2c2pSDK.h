@@ -11,9 +11,9 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-#import "my2c2pHeader.h"
-#import "my2c2pPaymentFormViewController.h"
-#import "paymentFormViewController.h"
+#import "My2c2pHeader.h"
+#import "My2c2pPaymentFormViewController.h"
+#import "PaymentFormViewController.h"
 #import <PassKit/PassKit.h>
 
 #define iOS2c2pLogNoti @"iOS2c2pLogNotification"
@@ -122,14 +122,22 @@ typedef void (^APIResponseError)(NSError* error);
 @property (nonatomic, assign) BOOL tokenizeWithoutAuthorization;
 
 #pragma mark - Client methods
-- (id)initWithPrivateKey:(NSString*)privateKey;
+
+/**
+ Create new instance with private key
+
+ @param privateKey Private Key with pem format.
+ @return My2c2pSDK
+ */
+- (id)initWithPrivateKey:(NSString *)privateKey;
+
 
 - (void)requestWithTarget:(id)targetViewController
                onResponse:(APIResponse)completion
                    onFail:(APIResponseError)error;
 
 - (void)requestWithTarget:(id)targetViewController
-           AndPaymentForm:(my2c2pPaymentFormViewController *)paymentForm
+           AndPaymentForm:(My2c2pPaymentFormViewController *)paymentForm
                onResponse:(APIResponse)completion
                    onFail:(APIResponseError)error;
 
