@@ -47,6 +47,7 @@
 		940056C11ECB041800AAAED4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		940056C31ECB042600AAAED4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		940056C51ECB042E00AAAED4 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		94188CE71ECF04D80012367A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		9476F97D1ECB060000F3A46F /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		947E742B1ECAF21000723A0D /* My2c2pSDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = My2c2pSDK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		947E742F1ECAF21000723A0D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -114,6 +115,7 @@
 		947E74221ECAF20F00723A0D = {
 			isa = PBXGroup;
 			children = (
+				94188CE71ECF04D80012367A /* README.md */,
 				947E742D1ECAF21000723A0D /* My2c2pSDK */,
 				947E74471ECAF21000723A0D /* My2c2pSDKTests */,
 				947E74521ECAF21000723A0D /* My2c2pSDKUITests */,
