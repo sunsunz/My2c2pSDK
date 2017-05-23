@@ -11,7 +11,6 @@
 
 @class PKPaymentRequest;
 
-
 @protocol My2c2pPaymentFormViewControllerDelegate <NSObject>
 @optional
 - (void)loadChannel:(My2c2pPaymentChannel)channel WithController:(UIViewController *)controller;
@@ -22,16 +21,12 @@
 - (void)paymentFormDidReceiveMerchantDetail: (NSDictionary *)response;
 @end
 
-
 @protocol My2c2pPaymentFormViewControllerSourceDelegate <NSObject>
 @optional
 - (void)paymentFormViewDidLoad;
 @end
 
-
-
 @interface My2c2pPaymentFormViewController : UIViewController
-
 @property (nonatomic,strong) id<My2c2pPaymentFormViewControllerDelegate> delegate;
 @property (nonatomic,strong) id<My2c2pPaymentFormViewControllerSourceDelegate> delegateVC;
 

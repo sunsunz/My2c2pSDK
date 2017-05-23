@@ -25,9 +25,7 @@
 
 @interface PaymentFormViewController : UIViewController
 
-
 @property (nonatomic,strong) id<PaymentFormViewControllerDelegate> delegate;
-
 @property (nonatomic,strong) id<PaymentFormViewControllerSourceDelegate> delegateVC;
 
 @property (nonatomic) BOOL useCustomView;
