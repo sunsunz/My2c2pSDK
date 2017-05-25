@@ -21,7 +21,6 @@
 		947E74491ECAF21000723A0D /* My2C2PSDKTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 947E74481ECAF21000723A0D /* My2C2PSDKTests.m */; };
 		947E74541ECAF21000723A0D /* My2C2PSDKUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 947E74531ECAF21000723A0D /* My2C2PSDKUITests.m */; };
 		94FDD85C1ECD3D6C00EEED98 /* My2c2pResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 94FDD85A1ECD3D6C00EEED98 /* My2c2pResources.bundle */; };
-		94FDD85D1ECD3D6C00EEED98 /* My2c2pSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94FDD85B1ECD3D6C00EEED98 /* My2c2pSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,7 +65,6 @@
 		947E74531ECAF21000723A0D /* My2C2PSDKUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = My2C2PSDKUITests.m; sourceTree = "<group>"; };
 		947E74551ECAF21000723A0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94FDD85A1ECD3D6C00EEED98 /* My2c2pResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = My2c2pResources.bundle; sourceTree = "<group>"; };
-		94FDD85B1ECD3D6C00EEED98 /* My2c2pSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = My2c2pSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +74,6 @@
 			files = (
 				940056C61ECB042E00AAAED4 /* Security.framework in Frameworks */,
 				940056C41ECB042600AAAED4 /* CoreGraphics.framework in Frameworks */,
-				94FDD85D1ECD3D6C00EEED98 /* My2c2pSDK.framework in Frameworks */,
 				940056C21ECB041800AAAED4 /* QuartzCore.framework in Frameworks */,
 				940056C01ECB041000AAAED4 /* SystemConfiguration.framework in Frameworks */,
 				940056BE1ECB040800AAAED4 /* libz.tbd in Frameworks */,
@@ -185,7 +182,6 @@
 			isa = PBXGroup;
 			children = (
 				94FDD85A1ECD3D6C00EEED98 /* My2c2pResources.bundle */,
-				94FDD85B1ECD3D6C00EEED98 /* My2c2pSDK.framework */,
 			);
 			path = My2c2pSDK;
 			sourceTree = "<group>";
