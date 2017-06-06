@@ -14,11 +14,24 @@
 @protocol My2c2pPaymentFormViewControllerDelegate <NSObject>
 @optional
 - (void)loadChannel:(My2c2pPaymentChannel)channel WithController:(UIViewController *)controller;
+
+///
+
+/**
+ Send back payment details
+
+ @param dictionary represent payment infomation
+ @param controller self
+ */
 - (void)cardInformationConfirmWithDictionary:(NSDictionary *)dictionary AndViewController:(UIViewController*)controller;
+
 - (void)dismissCardInformationWithController:(UIViewController *)controller AndError:(NSError *)error;
+
 - (void)dismissCardInformationWithController:(UIViewController *)controller;
+
 - (void)oneTwoThreePaymentDictionary:(NSDictionary *)dictionary AndViewController:(UIViewController *)controller;
-- (void)paymentFormDidReceiveMerchantDetail: (NSDictionary *)response;
+
+- (void)paymentFormDidReceiveMerchantDetail:(NSDictionary *)response;
 @end
 
 @protocol My2c2pPaymentFormViewControllerSourceDelegate <NSObject>
@@ -47,6 +60,15 @@
 @property (nonatomic,weak) IBOutlet UIButton *whatIsCvvButton;
 @property (nonatomic,weak) IBOutlet UIButton *storeCardWhatIsCvvButton;
 
+@property (nonatomic, weak) IBOutlet UILabel *labelTitle;
+@property (nonatomic, weak) IBOutlet UILabel *labelDetailTitle;
+@property (nonatomic, weak) IBOutlet UILabel *labelDetailValue;
+@property (nonatomic, weak) IBOutlet UILabel *labelInvoiceTitle;
+@property (nonatomic, weak) IBOutlet UILabel *labelInvoiceValue;
+@property (nonatomic, weak) IBOutlet UILabel *labelAmountTitle;
+@property (nonatomic, weak) IBOutlet UILabel *labelAmountValue;
+
+//@property (nonatomic, assign) BOOL tokenizeWithoutAuthorization;
 
 - (void) setApplePaymentRequest:(PKPaymentRequest *)request;
 - (void) setMerchantID:(NSString *)merchantID;
@@ -75,6 +97,7 @@
 - (void) setAllowStoreCard:(BOOL)allow;
 - (void) setMaskedPan:(NSString*)maskedPan;
 
+- (void)setTokenizeWithoutAuthorization:(BOOL)tokenizeWithoutAuthorization;
 
 - (void)showLoadingView;
 - (void)hideLoadingView;

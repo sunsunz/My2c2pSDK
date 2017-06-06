@@ -494,7 +494,7 @@
 					"-ObjC",
 					"-lstdc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.2c2p.my2c2psdk;
+				PRODUCT_BUNDLE_IDENTIFIER = com.2c2p.testMy2c2pSDK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
@@ -518,7 +518,7 @@
 					"-ObjC",
 					"-lstdc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.2c2p.my2c2psdk;
+				PRODUCT_BUNDLE_IDENTIFIER = com.2c2p.testMy2c2pSDK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
