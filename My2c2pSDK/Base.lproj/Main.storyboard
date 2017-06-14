@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,17 +21,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u6a-Tn-TbH">
+                                <rect key="frame" x="80" y="160" width="214" height="30"/>
+                                <state key="normal" title="Tokenize Without Authorization"/>
+                                <connections>
+                                    <action selector="tokenizeButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iIT-wT-vjj"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RwU-bo-jVY">
-                                <rect key="frame" x="129.5" y="120" width="115" height="30"/>
+                                <rect key="frame" x="130" y="120" width="115" height="30"/>
                                 <state key="normal" title="Sample Payment"/>
                                 <connections>
-                                    <action selector="paymentButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5On-d7-GeY"/>
+                                    <action selector="sampleButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2oV-oQ-1qq"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="u6a-Tn-TbH" firstAttribute="top" secondItem="RwU-bo-jVY" secondAttribute="bottom" constant="10" id="cvg-RW-zDl"/>
                             <constraint firstItem="RwU-bo-jVY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="eaP-z0-Jvn"/>
+                            <constraint firstItem="u6a-Tn-TbH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nEj-yi-m0o"/>
                             <constraint firstItem="RwU-bo-jVY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="z8L-Ro-twS"/>
                         </constraints>
                     </view>
