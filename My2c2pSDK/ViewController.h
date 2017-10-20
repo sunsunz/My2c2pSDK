@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "my2c2pSDK/My2c2pSDK.h"
 
 @interface ViewController : UIViewController
 
+@property (nonatomic, strong) My2c2pSDK *my2c2pSDK;
 
+//- (IBAction)paymentButtonPressed:(id)sender;
+//- (IBAction)twaButtonPressed:(id)sender;
 @end
 

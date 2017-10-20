@@ -20,8 +20,8 @@
 		947E743E1ECAF21000723A0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 947E743C1ECAF21000723A0D /* LaunchScreen.storyboard */; };
 		947E74491ECAF21000723A0D /* My2C2PSDKTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 947E74481ECAF21000723A0D /* My2C2PSDKTests.m */; };
 		947E74541ECAF21000723A0D /* My2C2PSDKUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 947E74531ECAF21000723A0D /* My2C2PSDKUITests.m */; };
-		94BE6A991ED6E1F3007DDB6C /* My2c2pResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 94BE6A971ED6E1F3007DDB6C /* My2c2pResources.bundle */; };
-		94BE6A9A1ED6E1F3007DDB6C /* My2c2pSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94BE6A981ED6E1F3007DDB6C /* My2c2pSDK.framework */; };
+		94FF2C5F1F99F730009A7957 /* my2c2pResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 94FF2C5D1F99F730009A7957 /* my2c2pResources.bundle */; };
+		94FF2C601F99F730009A7957 /* my2c2pSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94FF2C5E1F99F730009A7957 /* my2c2pSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,8 +65,8 @@
 		947E744F1ECAF21000723A0D /* My2c2pSDKUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = My2c2pSDKUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		947E74531ECAF21000723A0D /* My2C2PSDKUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = My2C2PSDKUITests.m; sourceTree = "<group>"; };
 		947E74551ECAF21000723A0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		94BE6A971ED6E1F3007DDB6C /* My2c2pResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = My2c2pResources.bundle; sourceTree = "<group>"; };
-		94BE6A981ED6E1F3007DDB6C /* My2c2pSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = My2c2pSDK.framework; sourceTree = "<group>"; };
+		94FF2C5D1F99F730009A7957 /* my2c2pResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = my2c2pResources.bundle; sourceTree = "<group>"; };
+		94FF2C5E1F99F730009A7957 /* my2c2pSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = my2c2pSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,9 +74,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94FF2C601F99F730009A7957 /* my2c2pSDK.framework in Frameworks */,
 				940056C61ECB042E00AAAED4 /* Security.framework in Frameworks */,
 				940056C41ECB042600AAAED4 /* CoreGraphics.framework in Frameworks */,
-				94BE6A9A1ED6E1F3007DDB6C /* My2c2pSDK.framework in Frameworks */,
 				940056C21ECB041800AAAED4 /* QuartzCore.framework in Frameworks */,
 				940056C01ECB041000AAAED4 /* SystemConfiguration.framework in Frameworks */,
 				940056BE1ECB040800AAAED4 /* libz.tbd in Frameworks */,
@@ -184,8 +184,8 @@
 		94FDD8591ECD3D6C00EEED98 /* My2c2pSDK */ = {
 			isa = PBXGroup;
 			children = (
-				94BE6A971ED6E1F3007DDB6C /* My2c2pResources.bundle */,
-				94BE6A981ED6E1F3007DDB6C /* My2c2pSDK.framework */,
+				94FF2C5D1F99F730009A7957 /* my2c2pResources.bundle */,
+				94FF2C5E1F99F730009A7957 /* my2c2pSDK.framework */,
 			);
 			path = My2c2pSDK;
 			sourceTree = "<group>";
@@ -301,7 +301,7 @@
 			files = (
 				947E743E1ECAF21000723A0D /* LaunchScreen.storyboard in Resources */,
 				947E743B1ECAF21000723A0D /* Assets.xcassets in Resources */,
-				94BE6A991ED6E1F3007DDB6C /* My2c2pResources.bundle in Resources */,
+				94FF2C5F1F99F730009A7957 /* my2c2pResources.bundle in Resources */,
 				947E74391ECAF21000723A0D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -484,6 +484,7 @@
 				DEVELOPMENT_TEAM = ES8PE79542;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/My2c2pSDK/My2c2pSDK",
 					"$(PROJECT_DIR)/My2C2PSDK/My2c2pSDK",
 				);
 				INFOPLIST_FILE = My2C2PSDK/Info.plist;
@@ -494,7 +495,7 @@
 					"-ObjC",
 					"-lstdc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.2c2p.my2c2psdk;
+				PRODUCT_BUNDLE_IDENTIFIER = com.2c2p.testMy2c2pSDK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
@@ -508,6 +509,7 @@
 				DEVELOPMENT_TEAM = ES8PE79542;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/My2c2pSDK/My2c2pSDK",
 					"$(PROJECT_DIR)/My2C2PSDK/My2c2pSDK",
 				);
 				INFOPLIST_FILE = My2C2PSDK/Info.plist;
@@ -518,7 +520,7 @@
 					"-ObjC",
 					"-lstdc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.2c2p.my2c2psdk;
+				PRODUCT_BUNDLE_IDENTIFIER = com.2c2p.testMy2c2pSDK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 			};

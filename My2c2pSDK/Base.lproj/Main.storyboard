@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,26 +18,59 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RwU-bo-jVY">
-                                <rect key="frame" x="129.5" y="120" width="115" height="30"/>
-                                <state key="normal" title="Sample Payment"/>
-                                <connections>
-                                    <action selector="paymentButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5On-d7-GeY"/>
-                                </connections>
-                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t03-xg-PBH">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pKa-rs-1nb">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="464"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RwU-bo-jVY">
+                                                <rect key="frame" x="8" y="60" width="115" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="New Payment"/>
+                                                <connections>
+                                                    <action selector="sampleButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2oV-oQ-1qq"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u6a-Tn-TbH">
+                                                <rect key="frame" x="8" y="89" width="214" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Tokenize Without Authorization"/>
+                                                <connections>
+                                                    <action selector="tokenizeButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iIT-wT-vjj"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="464" id="Y6G-5i-OvK"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="pKa-rs-1nb" firstAttribute="leading" secondItem="t03-xg-PBH" secondAttribute="leading" id="IFD-D1-xFs"/>
+                                    <constraint firstItem="pKa-rs-1nb" firstAttribute="top" secondItem="t03-xg-PBH" secondAttribute="top" id="IRW-Is-ILn"/>
+                                    <constraint firstItem="pKa-rs-1nb" firstAttribute="width" secondItem="t03-xg-PBH" secondAttribute="width" id="JPb-xU-mGY"/>
+                                    <constraint firstAttribute="bottom" secondItem="pKa-rs-1nb" secondAttribute="bottom" id="mhn-IH-ywQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="pKa-rs-1nb" secondAttribute="trailing" id="p68-N2-9Cb"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="RwU-bo-jVY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="eaP-z0-Jvn"/>
-                            <constraint firstItem="RwU-bo-jVY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="z8L-Ro-twS"/>
+                            <constraint firstItem="t03-xg-PBH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="0gz-Vj-rbu"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="t03-xg-PBH" secondAttribute="bottom" id="TP6-Kv-oeA"/>
+                            <constraint firstItem="t03-xg-PBH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hyS-tc-iTS"/>
+                            <constraint firstAttribute="trailing" secondItem="t03-xg-PBH" secondAttribute="trailing" id="zOq-ar-5dX"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.875" y="102.5"/>
         </scene>
     </scenes>
 </document>
