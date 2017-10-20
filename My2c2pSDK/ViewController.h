@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "My2c2pSDK/My2c2pSDK.h"
+#import "my2c2pSDK/My2c2pSDK.h"
 
 @interface ViewController : UIViewController
 
