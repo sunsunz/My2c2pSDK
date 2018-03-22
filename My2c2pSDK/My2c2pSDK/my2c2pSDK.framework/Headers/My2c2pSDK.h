@@ -15,6 +15,7 @@
 #import "my2c2pPaymentFormViewController.h"
 #import "paymentFormViewController.h"
 #import <PassKit/PassKit.h>
+#import "SubMerchant.h"
 
 #define iOS2c2pLogNoti @"iOS2c2pLogNotification"
 
@@ -49,6 +50,7 @@ typedef void (^APIResponseError)(NSError* error);
 
 @property (nonatomic,assign) id<My2c2pSDKDelegate> delegate;
 @property (nonatomic,strong) NSString* merchantID;
+@property (nonatomic,strong) NSString* subMerchantID;
 @property (nonatomic,strong) NSString* uniqueTransactionCode;
 @property (nonatomic,strong) NSString* desc;
 @property (nonatomic,assign) double amt DEPRECATED_MSG_ATTRIBUTE("Please use amount");
@@ -62,7 +64,7 @@ typedef void (^APIResponseError)(NSError* error);
 @property (nonatomic,strong) NSString* userDefined4;
 @property (nonatomic,strong) NSString* userDefined5;
 @property (nonatomic,assign) BOOL enableStoreCard;
-
+@property (nonatomic,assign) BOOL useStoredCardOnly;
 @property (nonatomic,strong) NSString* cardholderName DEPRECATED_MSG_ATTRIBUTE("Please use cardHolderName");
 @property (nonatomic,strong) NSString* cardHolderName;
 
@@ -70,6 +72,7 @@ typedef void (^APIResponseError)(NSError* error);
 @property (nonatomic,strong) NSString* cardHolderEmail;
 
 @property (nonatomic,strong) NSString* storeCardUniqueID;
+@property (nonatomic, strong) NSArray *subMerchantList;
 
 //for 3ds
 @property (nonatomic,strong) NSString *request3DS;
@@ -104,7 +107,7 @@ typedef void (^APIResponseError)(NSError* error);
 @property (nonatomic, strong) NSString *chargeNextDate;
 @property (nonatomic, strong) NSString *promotion;
 @property (nonatomic, strong) NSString *secretKey;
-@property (nonatomic, strong) NSString *paymentOption;
+@property (nonatomic,assign) My2c2pPaymentOption paymentOption;
 @property (nonatomic, strong) NSString *hashKey;
 
 
@@ -139,6 +142,11 @@ typedef void (^APIResponseError)(NSError* error);
                onResponse:(APIResponse)completion
                    onFail:(APIResponseError)error;
 
+- (void)requestWithTarget:(id)targetViewController
+           AndPaymentFormV2:(paymentFormViewController *)paymentForm
+               onResponse:(APIResponse)completion
+                   onFail:(APIResponseError)error;
+
 
 #pragma mark - Apple Pay
 - (void)requestWithTarget:(id)targetViewController
@@ -149,5 +157,12 @@ typedef void (^APIResponseError)(NSError* error);
 - (BOOL)isSupportApplePay:(PKPaymentRequest *)pkrequest;
 
 + (BOOL)handleOpenURL:(NSURL *)url;
++ (NSString *) paymentOptionToString:(My2c2pPaymentOption) paymentOption;
+@end
+
+@interface UIImage (My2c2pResourceBundle)
+
++ (UIImage *)my2c2pImageWithName:(NSString *)name andSuffix:(NSString *)suffix;
 
 @end
+

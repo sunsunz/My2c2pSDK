@@ -17,8 +17,12 @@
 - (NSString *)getErrorMessageFromValidateDate;
 - (NSString *)getErrorMessageFromValidateCard;
 - (NSArray *)textMY;
+- (BOOL)isEmptyString;
 - (BOOL)shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string AndMaxLength:(int)length;
 - (BOOL)shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string AllowOnlyNumber:(BOOL)allowOnlyNumber AndMaxLength:(int)length;
 
 - (BOOL)isSupportCardFromArray:(NSArray *)availableCards;
+
+//fixes for [PGWEX-146]
+- (int) getCardTypeForInput;
 @end

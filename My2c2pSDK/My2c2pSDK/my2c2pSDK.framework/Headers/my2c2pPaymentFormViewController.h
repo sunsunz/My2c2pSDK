@@ -53,12 +53,13 @@
 @property (nonatomic,weak) IBOutlet UIButton *confirmbtn;
 @property (nonatomic,weak) IBOutlet UIButton *storeCardConfirmbtn;
 @property (nonatomic,weak) IBOutlet UIButton *useNewCardBtn;
-@property (nonatomic,weak) IBOutlet UIButton *whatIsCvvButton;
-@property (nonatomic,weak) IBOutlet UIButton *storeCardWhatIsCvvButton;
+@property (nonatomic,weak) IBOutlet UIButton *creditCardCVVInfo;
+@property (nonatomic,weak) IBOutlet UIButton *storeCreditCardCVVInfo;
 
 
 - (void) setApplePaymentRequest:(PKPaymentRequest *)request;
 - (void) setMerchantID:(NSString *)merchantID;
+- (void) setSubMerchantID:(NSString *)subMerchantID;
 - (void) setAmount:(double)amount;
 - (void) setInvoicenumber:(NSString *)invoicenumber;
 - (void) setCurrencyCode:(NSString *)currencyCode;
@@ -66,12 +67,11 @@
 - (void) setPromotion:(NSString *)promotion;
 - (void) setAllowIPP:(BOOL)ipp;
 
-- (void) setPaymentOption:(NSString *)paymentOption;
+- (void) setPaymentOption:(My2c2pPaymentOption)paymentOption;
 - (void) setRequest3ds:(NSString *)request3ds;
 - (void) setStoreCardUniqueId:(NSString *)storeCardUniqueId;
 - (void) setRecurring:(BOOL)recurring;
 - (void) setInvoicePrefix:(NSString *)invoicePrefix;
-
 - (void) setMWRequest:(id)mwrequest;
 - (void) setProductDetails:(NSString *)productDetails;
 - (void) setInstallmentPeriodFilter:(NSString *)installmentPeriodFilter;
@@ -82,7 +82,9 @@
 
 
 - (void) setAllowStoreCard:(BOOL)allow;
+- (void) setUseStoredCardOnly:(BOOL)useStoreCardOnly;
 - (void) setMaskedPan:(NSString *)maskedPan;
+- (void)setSubMerchantList:(NSArray *)list;
 
 
 

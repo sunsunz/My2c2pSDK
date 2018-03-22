@@ -33,6 +33,7 @@
     self.my2c2pSDK.productionMode = NO;
     self.my2c2pSDK.uniqueTransactionCode = [self randomUniqueTransactionCode];
     self.my2c2pSDK.desc = @"example description";
+    self.my2c2pSDK.paymentUI = true;
     self.my2c2pSDK.amount = 199.00;
     
     [self.my2c2pSDK requestWithTarget:self onResponse:^(NSDictionary *response) {
