@@ -53,13 +53,14 @@
 - (void) setAmount:(double)amount;
 - (void) setEmail:(NSString *)email;
 - (void) setName:(NSString *)name;
+- (void) setUseStoredCardOnly:(BOOL)useStoreCardOnly;
 - (void) setCurrencyCode:(NSString *)currencyCode;
 
 - (void) setAllowStoreCard:(BOOL)allow;
 - (void) setStoreCardUniqueId:(NSString*)storeCardUniqueID;
 - (void) setMaskedPan:(NSString*)maskedPan;
 
-
+- (BOOL)isAutoRedirectImmediate;
 
 - (void)showLoadingView;
 - (void)hideLoadingView;
